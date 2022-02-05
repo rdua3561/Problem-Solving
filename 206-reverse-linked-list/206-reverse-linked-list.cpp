@@ -13,17 +13,20 @@ public:
     ListNode* reverseList(ListNode* head) {
         
         int i=0;
-     
+        int c=0;
         ListNode* p=head;
+         while(p!=NULL)
+        {
+           c++;
+            p=p->next;
+        }
         
-        
-        int a[6000];
+        int a[c+1];
         p=head;
         while(p!=NULL)
         {
-            a[i]=p->val;
+            a[i++]=p->val;
             p=p->next;
-            i++;
         }
         
         i--;
