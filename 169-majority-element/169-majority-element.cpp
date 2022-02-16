@@ -26,7 +26,7 @@ public:
         
 //         return max;
         
-        unordered_map<int,int> counter;
+        map<int,int> counter;
         
         for(auto i: nums)
         {
