@@ -8,8 +8,10 @@ public:
             cnt[c-'a']++;
 		
         int num=cnt[s[0]-'a'];
+        
         for(int i: cnt){
-            if(i!=num and i!=0) return false;
+            if(i!=num and i!=0)
+                return false;
         }
         return true;
     
