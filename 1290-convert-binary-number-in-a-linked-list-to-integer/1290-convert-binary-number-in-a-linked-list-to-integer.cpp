@@ -11,6 +11,7 @@
 #include<bits/stdc++.h>
 class Solution {
 public:
+    //METHOD 1---BRUTE FORCE
 //     int getDecimalValue(ListNode* head) {
         
 //         vector<int> a;
@@ -38,7 +39,7 @@ public:
         
 //     }
     
-    //METHOD 2
+    //METHOD 2---TRICK
         int getDecimalValue(ListNode* head) {
         int res=0;
         while(head!=NULL){
