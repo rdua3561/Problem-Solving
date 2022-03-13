@@ -18,7 +18,7 @@ public:
         for(int i=0;i<words.size();i++)
         {
             if(checkPalindrome(words[i])){
-                ans=words[i];
+                ans+=words[i];
                 
                 return ans;
             }
@@ -29,4 +29,7 @@ public:
        
         
     }
+    //Approach 2
+   
+    
 };
