@@ -14,13 +14,13 @@ public:
     vector<int> st;
     vector<int> inorderTraversal(TreeNode* root) {
         
-        if(root==NULL) 
-            return {};
+        if(root!=NULL) 
+        {
             
         inorderTraversal(root->left);
         st.push_back(root->val);
         inorderTraversal(root->right);
-        
+        }
         
         return st;
         
