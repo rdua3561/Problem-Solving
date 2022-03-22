@@ -25,7 +25,7 @@ public:
          if(root){
         for(int i=0;i<(root->children).size();i++){
             
-            postorder((root->children)[i]);
+            postorder(root->children[i]);
         }
         v.push_back(root->val);
         return v;
