@@ -1,33 +1,26 @@
 class Solution {
     
     public:
-
-    vector<vector<int>> ch;
-   void sun(vector<int>& nums, int i, vector<int>& ofs)
+vector<vector<int>> v;
+   void help(vector<int>& nums, int i, vector<int>& st)
     {
-        if(nums.size()==i)
+        
+        if(i==nums.size())
         {
-            ch.push_back(ofs);
+            v.push_back(st);
             return;
         }
-        
-        ofs.push_back(nums[i]);
-       sun(nums,i+1,ofs);
-        ofs.pop_back();
-        
-         sun(nums,i+1,ofs);
-        
-        
-        
+        st.push_back(nums[i]);
+       help(nums,i+1,st);
+       st.pop_back();
+       help(nums,i+1,st);
     }
 
     vector<vector<int>> subsets(vector<int>& nums) {
         
-    
-        vector<int> ofs;
+    vector <int> st;
         int i=0;
-         sun(nums,i,ofs);
-        return ch;
-        
+        help(nums,i,st);
+       return v;
     }
 };
