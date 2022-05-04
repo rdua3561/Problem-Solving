@@ -14,7 +14,7 @@ public:
         }
             return;
         }
-        int l=0,r=0;
+       
         if(candidates[i]<=target){
         nums.push_back(candidates[i]);
         help(nums,candidates,i,n,target-candidates[i]);
