@@ -1,7 +1,7 @@
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-        
+        //DUTCH NATIONAL FLAG
         int n=nums.size();
         
         int l=0,m=0,h=n-1;
@@ -24,7 +24,7 @@ public:
                 
             else if(nums[m]==2)
             {
-                swap(nums[m],nums[h]);
+               swap(nums[m],nums[h]);
                h--; 
                 
             }
