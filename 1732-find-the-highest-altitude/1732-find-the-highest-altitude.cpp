@@ -21,10 +21,6 @@ public:
              max=prefix[i];
             }
      }
-         for(int i=0;i<size1;i++)
-        {
-           cout<< prefix[i];
-        }
     if(max>0)
     return max;
         
