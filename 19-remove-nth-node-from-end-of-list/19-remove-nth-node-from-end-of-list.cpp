@@ -28,18 +28,8 @@ public:
         if(l==n)
             return head->next;
         
-//         else if(l==2)
-//         {
-//             snd=snd->next;
-//             delete(snd);
-            
-//             return head;
-            
-//         }
+        l=l-n;  
         
-        l=l-n;
-        
-   
         for(int i=1;i<l;i++)
             snd=snd->next;
         
