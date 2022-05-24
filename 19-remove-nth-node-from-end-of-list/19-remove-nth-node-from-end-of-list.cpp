@@ -43,9 +43,9 @@ public:
         for(int i=1;i<l;i++)
             snd=snd->next;
         
-        node=snd->next;
+        //node=snd->next;
         snd->next=snd->next->next;
-        delete(node);
+       // delete(node);
         return head;
         
     
