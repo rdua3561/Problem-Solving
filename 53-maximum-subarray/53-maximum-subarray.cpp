@@ -22,21 +22,38 @@ public:
      
 //     }
     
-    int maxSubArray(vector<int>& nums) {
+//     int maxSubArray(vector<int>& nums) {
+//         //Method 1: Kadanes Algorithm
+//         int n = nums.size();
+//         int ultra_max=INT_MIN;
+//         int sum=0;
+        
+//         for(int i=0;i<n;i++){
+            
+//             sum+=nums[i];
+//             ultra_max=max(sum,ultra_max);
+//             if(sum<0)
+//                 sum=0;
+      
+//       }
+//         return ultra_max;
+//     }
+        
+        int maxSubArray(vector<int>& nums) {
         //Method 1: Kadanes Algorithm
         int n = nums.size();
-        int ultra_max=INT_MIN;
-        int sum=0;
+        int ultra_max=nums[0];
+        int res=nums[0];
         
-        for(int i=0;i<n;i++){
+        for(int i=1;i<n;i++){
             
-            sum+=nums[i];
-            ultra_max=max(sum,ultra_max);
-            if(sum<0)
-                sum=0;
+            
+            ultra_max=max(ultra_max+nums[i],nums[i]);
+            res=max(ultra_max,res);
+            
       
       }
-        return ultra_max;
+        return res;
     }
         
 
