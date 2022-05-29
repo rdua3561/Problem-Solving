@@ -22,8 +22,10 @@ public:
      
 //     }
     
+    
+    //Method 1: Kadanes Algorithm
 //     int maxSubArray(vector<int>& nums) {
-//         //Method 1: Kadanes Algorithm
+//         
 //         int n = nums.size();
 //         int ultra_max=INT_MIN;
 //         int sum=0;
@@ -38,9 +40,9 @@ public:
 //       }
 //         return ultra_max;
 //     }
-        
+               
+//Method 3: Kadanes Algorithm Modified Version
         int maxSubArray(vector<int>& nums) {
-        //Method 1: Kadanes Algorithm
         int n = nums.size();
         int ultra_max=nums[0];
         int res=nums[0];
@@ -51,7 +53,6 @@ public:
             ultra_max=max(ultra_max+nums[i],nums[i]);
             res=max(ultra_max,res);
             
-      
       }
         return res;
     }
