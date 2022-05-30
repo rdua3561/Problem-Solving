@@ -11,13 +11,13 @@ public:
             mp[i]++;
         }
         
-        for(auto i=mp.begin();i!=mp.end();i++)
+        for(auto i: mp)
         {
-            if(i->second>n/3)
-                v.push_back(i->first);
+            if(i.second>n/3)
+                v.push_back(i.first);
         }
         
-        return v;
         
+        return v;
     }
 };
