@@ -26,6 +26,8 @@ public:
         
 //         return max;
         
+        
+        //METHOD 2: MAP
         map<int,int> counter;
         
         for(auto i: nums)
@@ -35,6 +37,25 @@ public:
         }
         
         return 0;
+        
+        //METHOD 3: BRUTE FORCE O(N^2)
+//         int n=nums.size();
+//         vector<int> v;
+//         for(int i=0;i<n;i++)
+//         {
+//             int count=1;
+//             for(int j=i+1;j<n;j++)
+//             {
+//                 if(nums[i]==nums[j])
+//                     count++;
+//             }
+            
+//             if(count>n/2)
+//             {
+//                 return nums[i];
+//             }
+//         }
+//         return -1;
         
     }
 };
