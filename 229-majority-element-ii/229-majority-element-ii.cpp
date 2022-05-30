@@ -11,10 +11,10 @@ public:
             mp[i]++;
         }
         
-        for(auto i: mp)
+        for(auto i=mp.begin();i!=mp.end();i++)
         {
-            if(i.second>n/3)
-                v.push_back(i.first);
+            if(i->second>n/3)
+                v.push_back(i->first);
         }
         
         return v;
