@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> runningSum(vector<int>& nums) {
-        
+        //PREFIX SUM
         int n=nums.size();
         //vector <int> sol;
         int p=0;
