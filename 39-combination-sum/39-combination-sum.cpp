@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 class Solution {
 public:
+    //METHOD 1
     vector<vector<int>> v;
     void help(vector<int>& nums,vector<int>& candidates,int i,int n, int target)
     {
@@ -40,3 +41,28 @@ public:
     
 };
 
+//METHOD 2
+//   vector<vector<int>> raj;
+    
+//     void help(vector<int>& nums,vector<int>& candidates,int i,int n, int target)
+//     {
+//         if(i==n)
+//         {
+//         if(target==0)
+//         {
+//             raj.push_back(nums);
+            
+//         }
+//             return;
+//         }
+       
+//         if(candidates[i]<=target){
+//         nums.push_back(candidates[i]);
+//         help(nums,candidates,i,n,target-candidates[i]);
+//             nums.pop_back();
+//         }
+        
+//         help(nums,candidates,i+1,n,target);
+        
+        
+//     }
