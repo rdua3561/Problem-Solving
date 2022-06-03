@@ -24,7 +24,7 @@ public:
                temp->next=temp->next->next;
                //delete(del);
            }
-           else
+           else     // This else is very very important...It will fail in case of [1 1 1] 
            temp=temp->next;
        }
         
