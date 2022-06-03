@@ -40,9 +40,10 @@ public:
 //         }
         
 //         return head;
+        
+        
+        
         //Method 2
-        
-        
         ListNode* curr=head;
         ListNode* prev=NULL;
         ListNode* temp=NULL;
@@ -52,7 +53,11 @@ public:
             curr->next=prev;
             prev=curr;
             curr=temp;
+            
+           
         }
+       
         return prev;
     }
+       
 };
