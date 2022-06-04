@@ -13,8 +13,15 @@ public:
         // *node = *node->next;
         
         //METHOD 2
-        node->val = node->next->val;
-        node->next = node->next->next;
+       
+        // node->val = node->next->val;
+        // node->next = node->next->next;
         
+        //Method 3
+         ListNode* temp=node->next;
+        node->val=temp->val;
+        node->next=temp->next;
+        delete(temp);
+    
     }
 };
