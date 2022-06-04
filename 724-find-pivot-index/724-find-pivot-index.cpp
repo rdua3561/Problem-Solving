@@ -27,7 +27,7 @@ public:
         
 //         else
 //             return ans;
-        for (int i = 0; i < nums.size(); i++)
+        for (int i = 0; i < n; i++)
         {
             if (prefix[i] - nums[i] == prefix[nums.size() - 1] - prefix[i])
                 return i;
