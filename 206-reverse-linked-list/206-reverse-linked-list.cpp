@@ -11,7 +11,7 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        //Method 1
+        //Method 1: Using Array
 //         int i=0;
 //         int c=0;
 //         ListNode* p=head;
@@ -43,21 +43,36 @@ public:
         
         
         
-        //Method 2
-        ListNode* curr=head;
-        ListNode* prev=NULL;
-        ListNode* temp=NULL;
-        while(curr!=NULL)
-        {
-            temp=curr->next;
-            curr->next=prev;
-            prev=curr;
-            curr=temp;
+        //Method 2:Using Pointers
+//         ListNode* curr=head;
+//         ListNode* prev=NULL;
+//         ListNode* temp=NULL;
+//         while(curr!=NULL)
+//         {
+//             temp=curr->next;
+//             curr->next=prev;
+//             prev=curr;
+//             curr=temp;
             
            
-        }
+//         }
        
-        return prev;
+//         return prev;
+        
+        //Method 3: Using Vector
+        vector<int> v;
+        for(ListNode* curr=head; curr!=NULL;curr=curr->next)
+        {
+            v.push_back(curr->val);
+        }
+        
+        for(ListNode* curr=head; curr!=NULL;curr=curr->next)
+        {
+            curr->val=v.back();
+            v.pop_back();
+        }
+        
+        return head;
     }
        
 };
