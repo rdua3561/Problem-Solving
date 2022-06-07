@@ -10,7 +10,22 @@
  */
 class Solution {
 public:
+   void help(ListNode* prev,ListNode* t)
+   {
+       if(t==NULL)
+       {
+           t=prev;
+         
+           return;
+       }
+       
+           help(t,t->next);
+           t->next=prev;
+       }
+     
+       
     ListNode* reverseList(ListNode* head) {
+   
         //Method 1: Using Array
 //         int i=0;
 //         int c=0;
@@ -60,19 +75,35 @@ public:
 //         return prev;
         
         //Method 3: Using Vector
-        vector<int> v;
-        for(ListNode* curr=head; curr!=NULL;curr=curr->next)
-        {
-            v.push_back(curr->val);
-        }
+//         vector<int> v;
+//         for(ListNode* curr=head; curr!=NULL;curr=curr->next)
+//         {
+//             v.push_back(curr->val);
+//         }
         
-        for(ListNode* curr=head; curr!=NULL;curr=curr->next)
-        {
-            curr->val=v.back();
-            v.pop_back();
-        }
+//         for(ListNode* curr=head; curr!=NULL;curr=curr->next)
+//         {
+//             curr->val=v.back();
+//             v.pop_back();
+//         }
         
-        return head;
-    }
+//         return head;
+        
+        //Method 4: Using recursion
+        ListNode* prev=NULL;
+       ListNode* rd=head;
+        if(head==NULL)
+            return NULL;
+          while(rd->next!=NULL)
+       {
+           
+           rd=rd->next;
+       }
+         help(prev,head);
+        
+       return rd;
+    
+         }
+    
        
 };
