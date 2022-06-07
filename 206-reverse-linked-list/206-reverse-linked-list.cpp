@@ -10,101 +10,35 @@
  */
 class Solution {
 public:
-   void help(ListNode* prev,ListNode* head)
+  void help(ListNode* prev,ListNode* head) {
+
+   if(head==NULL)     //Base Case
    {
-       if(head==NULL)
-       {
-           head=prev;
-         
-           return;
-       }
-       
-           help(head,head->next);
-           head->next=prev;
-       }
-     
-       
-    ListNode* reverseList(ListNode* head) {
+       head=prev;
+       return;
+   }
    
-        //Method 1: Using Array
-//         int i=0;
-//         int c=0;
-//         ListNode* p=head;
-//          while(p!=NULL)
-//         {
-//            c++;
-//             p=p->next;
-//         }
-        
-//         int a[c+1];
-//         p=head;
-//         while(p!=NULL)
-//         {
-//             a[i++]=p->val;
-//             p=p->next;
-//         }
-        
-//         i--;
-//         p=head;
-        
-//          while(p!=NULL)
-//         {
-//             p->val=a[i];
-//              i--;
-//             p=p->next;
-//         }
-        
-//         return head;
-        
-        
-        
-        //Method 2:Using Pointers
-//         ListNode* curr=head;
-//         ListNode* prev=NULL;
-//         ListNode* temp=NULL;
-//         while(curr!=NULL)
-//         {
-//             temp=curr->next;
-//             curr->next=prev;
-//             prev=curr;
-//             curr=temp;
-            
-           
-//         }
-       
-//         return prev;
-        
-        //Method 3: Using Vector
-//         vector<int> v;
-//         for(ListNode* curr=head; curr!=NULL;curr=curr->next)
-//         {
-//             v.push_back(curr->val);
-//         }
-        
-//         for(ListNode* curr=head; curr!=NULL;curr=curr->next)
-//         {
-//             curr->val=v.back();
-//             v.pop_back();
-//         }
-        
-//         return head;
-        
-        //Method 4: Using recursion
-        ListNode* prev=NULL;
-       ListNode* rd=head;
-        
-        if(head==NULL)
-            return NULL;
-          while(rd->next!=NULL)
-       {
-           
-           rd=rd->next;
-       }
-         help(prev,head);
-        
-       return rd;
+       help(head,head->next);         //Recursive Call
+       head->next=prev;              //Small Work while Returning
+   }
+ 
+   
+ListNode* reverseList(ListNode* head) {
+
+    ListNode* prev=NULL;
+    ListNode* rd=head;
+	
+    if(head==NULL)
+        return NULL;
+		
+   while(rd->next!=NULL)
+   {
+       rd=rd->next;
+   }
+    help(prev,head);
     
-         }
+   return rd;
+}
     
        
 };
