@@ -10,13 +10,13 @@
  */
 class Solution {
 public:
-  void help(ListNode* prev,ListNode* head) {
+   void help(ListNode* prev,ListNode* head) {
 
-   if(head==NULL)     //Base Case
-   {
-       head=prev;
-       return;
-   }
+	   if(head==NULL)     //Base Case
+	   {
+		   head=prev;
+		   return;
+	   }
    
        help(head,head->next);         //Recursive Call
        head->next=prev;              //Small Work while Returning
@@ -24,7 +24,6 @@ public:
  
    
 ListNode* reverseList(ListNode* head) {
-
     ListNode* prev=NULL;
     ListNode* rd=head;
 	
@@ -35,10 +34,9 @@ ListNode* reverseList(ListNode* head) {
    {
        rd=rd->next;
    }
+   
     help(prev,head);
     
    return rd;
 }
-    
-       
 };
