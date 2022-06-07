@@ -10,17 +10,17 @@
  */
 class Solution {
 public:
-   void help(ListNode* prev,ListNode* t)
+   void help(ListNode* prev,ListNode* head)
    {
-       if(t==NULL)
+       if(head==NULL)
        {
-           t=prev;
+           head=prev;
          
            return;
        }
        
-           help(t,t->next);
-           t->next=prev;
+           help(head,head->next);
+           head->next=prev;
        }
      
        
@@ -92,6 +92,7 @@ public:
         //Method 4: Using recursion
         ListNode* prev=NULL;
        ListNode* rd=head;
+        
         if(head==NULL)
             return NULL;
           while(rd->next!=NULL)
