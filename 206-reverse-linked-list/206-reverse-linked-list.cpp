@@ -14,7 +14,7 @@ public:
    {
        if(head==NULL)
        {
-           head=prev;
+           //head=prev;
          
            return;
        }
