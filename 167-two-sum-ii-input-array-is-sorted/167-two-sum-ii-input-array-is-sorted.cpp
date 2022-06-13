@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        
+        //Method 1: 2 Pointers
         int i=0,j=nums.size()-1;
         while(i<=j)
         {
@@ -18,4 +18,7 @@ public:
         return {};
         
     }
+        
+      
+    
 };
