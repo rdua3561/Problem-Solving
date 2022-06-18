@@ -15,10 +15,8 @@ void help(vector<int>& nums,int i,vector<int>& st)
     help(nums,i+1,st);
     st.pop_back();
     
-    while(i+1<nums.size() && nums[i]==nums[i+1])
-    {
-         i++;
-    }
+   while(i+1<nums.size() and nums[i]==nums[i+1])
+       i++;
     //not pick
     help(nums,i+1,st);
 
