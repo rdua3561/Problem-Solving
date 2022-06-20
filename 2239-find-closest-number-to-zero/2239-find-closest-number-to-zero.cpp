@@ -14,7 +14,7 @@ public:
     if( t != nums.end() )
         return res;
     
-    
+    else
     return -res;
         
     }
