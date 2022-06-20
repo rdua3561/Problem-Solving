@@ -17,6 +17,8 @@ public:
 
 //         }
 //         return c;
+        
+        //METHOD 2: UNORDERED_MAP TC=O(n)
         unordered_map<int,int> mp;
         int sum=0,c=0;
         int n=nums.size();
