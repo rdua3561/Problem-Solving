@@ -11,7 +11,7 @@ public:
         for(auto x: nums)
         {
             int c=1;
-           if(mp.find(x-1)==mp.end()) //error bcoz nums mai search kro na ki map mai
+           if(mp.find(x-1)==mp.end()) //error aa rhi thi bcoz nums mai search kro na ki map mai
            {
                
                while(mp.find(x+1)!=mp.end())
