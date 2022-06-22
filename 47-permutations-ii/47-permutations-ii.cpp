@@ -13,18 +13,20 @@ public:
         set<int> s;
         for(int i=pos;i<nums.size();i++)
         {
+          //if(i==pos|| nums[i]!=nums[pos])
             if(s.find(nums[i])!=s.end())
-            {
                 continue;
-            }
-           s.insert(nums[i]);
-            
+            s.insert(nums[i]);
             swap(nums[i],nums[pos]);
             helper(nums,pos+1);
+          
             swap(nums[i],nums[pos]);
+          }
+          
+            
         }
         
-    }
+    
     vector<vector<int>> permuteUnique(vector<int>& nums) {
         
         int pos=0;
