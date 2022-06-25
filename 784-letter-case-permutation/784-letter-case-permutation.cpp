@@ -19,12 +19,12 @@ public:
         
          if(s[i]>='a' and s[i]<='z')
         {
-              temp+=s[i]-32;
+              temp+=s[i];
             help(i+1,s,ans,temp);
             temp.pop_back();
             
              
-             temp+=s[i];
+             temp+=s[i]-32;
              help(i+1,s,ans,temp);
              temp.pop_back();
             
@@ -33,11 +33,13 @@ public:
         
          if(s[i]>='A' and s[i]<='Z')
         {
-              temp+=s[i]+32;
+             //ek baar A ko a banao
+             temp+=s[i]+32;
             help(i+1,s,ans,temp);
             temp.pop_back();
             
-               temp+=s[i];
+             //ek baar A ko A hi rhne doa
+             temp+=s[i];
              help(i+1,s,ans,temp);
              temp.pop_back();
         }
