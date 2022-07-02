@@ -11,14 +11,14 @@ public:
         {
             return grid[i][j];
         }
-        int down=INT_MAX,right=INT_MAX;
+        int down=INT_MAX,right=INT_MAX;// watch out
         if(i+1<n)
-         down=help(i+1,j,grid,dp);
+         down=grid[i][j]+help(i+1,j,grid,dp);
         
         if(j+1<m)
-         right=help(i,j+1,grid,dp);
+         right=grid[i][j]+help(i,j+1,grid,dp);
         
-        return dp[i][j]=grid[i][j]+min(down,right);
+        return dp[i][j]=min(down,right);
         
     }
     
