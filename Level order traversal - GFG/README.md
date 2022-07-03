@@ -1,5 +1,5 @@
 # Level order traversal
-## Easy 
+##  Easy 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Given a binary tree, find its level order traversal.<br>
 Level order traversal of a tree is <a href="http://www.geeksforgeeks.org/breadth-first-traversal-for-a-graph/" target="_blank">breadth-first traversal f</a>or the tree.</span></p>
