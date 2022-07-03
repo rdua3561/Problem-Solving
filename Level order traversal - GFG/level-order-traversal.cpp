@@ -49,15 +49,12 @@ class Solution
       q.push(node);
       while(!q.empty())
       {
-          Node* temp=q.front();
-          v.push_back(temp->data);
-          q.pop();
-          
-          if(temp->left!=NULL)
-          q.push(temp->left);
-          
-          if(temp->right!=NULL)
-          q.push(temp->right);
+         Node* temp=q.front();
+         q.pop();
+         v.push_back(temp->data);
+         if(temp->left!=NULL) q.push(temp->left);
+         
+         
            
       }
       return v;
