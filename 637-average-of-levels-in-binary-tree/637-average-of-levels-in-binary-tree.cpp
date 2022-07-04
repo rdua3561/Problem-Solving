@@ -12,6 +12,8 @@
 class Solution {
 public:
     vector<double> averageOfLevels(TreeNode* root) {
+        
+        //Method 1: Working + jugad
 //         if(root==NULL) return {};
 //         vector<double> ans;
 //         queue<TreeNode*> q;
@@ -40,7 +42,7 @@ public:
 //     }
         
         
-        
+        //Method 2: Easy going
          if(root==NULL) return {};
         vector<double> ans;
         queue<TreeNode*> q;
