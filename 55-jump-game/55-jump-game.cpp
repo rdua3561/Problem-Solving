@@ -1,22 +1,7 @@
 class Solution {   //[3,2,1,0,4]
 public:
-    
-//     bool help(int index,vector<int>& nums)
-//     {
-//        if(index>=nums.size()-1)  return true;
-        
-        
-//         for(int j=1;j<=nums[j];j++)
-//         {
-//                 help(index+j,nums);
-//         }
-//         return false;                              
-//     }
-//     bool canJump(vector<int>& nums) {
-        
-//       return help(0,nums);
-//     }
-    
+
+      //METHOD 2:REC+MEMOISATION
 //        bool helper(int inx, vector<int>& nums, vector<int>& dp){
 //         if(inx >= nums.size()-1) return true;
         
@@ -32,6 +17,7 @@ public:
 //         return helper(0, nums, dp);
 //     }
 
+    //METHOD 3:BOTTOM UP ....TLE
 //      bool canJump(vector<int>& nums) {
 //         vector<int> dp(nums.size(), 0);
 //         dp[nums.size()-1] = 1;
@@ -45,7 +31,7 @@ public:
 //         }
 //         return dp[0];
 //     }
-    
+    //METHOD 4: GREEDY APPROACH
         bool canJump(vector<int>& nums) {
         int n = nums.size(), canReach = n-1;
         for(int curPos = n-1; curPos >= 0; curPos--){
