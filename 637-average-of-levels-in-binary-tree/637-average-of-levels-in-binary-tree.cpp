@@ -12,29 +12,55 @@
 class Solution {
 public:
     vector<double> averageOfLevels(TreeNode* root) {
-        if(root==NULL) return {};
+//         if(root==NULL) return {};
+//         vector<double> ans;
+//         queue<TreeNode*> q;
+//         q.push(root);
+//         while(!q.empty())
+//         {
+//             int sz=q.size();
+//             int count=sz;
+//             double avg=0;
+//             while(sz!=0)
+//             {
+//                 auto temp=q.front();
+//                 q.pop();
+//                 avg+=(temp->val);
+//                 if(sz==1)
+//                 avg=avg/count;
+                
+//                 if(temp->left!=NULL) q.push(temp->left);
+//                 if(temp->right!=NULL) q.push(temp->right);
+                
+//                 sz--;
+//             }
+//             ans.push_back(avg);
+//         }
+//         return ans;
+//     }
+        
+        
+        
+         if(root==NULL) return {};
         vector<double> ans;
         queue<TreeNode*> q;
         q.push(root);
         while(!q.empty())
         {
             int sz=q.size();
-            int count=sz;
             double avg=0;
-            while(sz!=0)
+            for(int i=0;i<sz;i++)
             {
                 auto temp=q.front();
                 q.pop();
-                avg+=(temp->val);
-                if(sz==1)
-                avg=avg/count;
+               avg+=temp->val;
                 
                 if(temp->left!=NULL) q.push(temp->left);
                 if(temp->right!=NULL) q.push(temp->right);
                 
-                sz--;
+                
             }
-            ans.push_back(avg);
+            ans.push_back(avg/sz);
         }
         return ans;
     }
