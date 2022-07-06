@@ -109,7 +109,7 @@ class Solution
         vector<int> v;
         if(root==NULL) return v;
         queue<pair<Node*,int>> q;
-        map<int,vector<int>> mp;
+        map<int,int> mp;
         q.push({root,0});
         while(!q.empty())
         {
@@ -121,17 +121,13 @@ class Solution
             if(temp->right!=NULL) q.push({temp->right,dist+1});
             
         if(mp.find(dist)==mp.end())
-            mp[dist].push_back(temp->data);
+            mp[dist]=temp->data;
         }
         
-        for(auto it: mp)
-        {
-            for(auto k: it.second)
-            {
-                v.push_back(k);
-            }
-            
-        }
+       for(auto it:mp)
+       {
+           v.push_back(it.second);
+       }
         return v;
     }
 
