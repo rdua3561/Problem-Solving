@@ -124,13 +124,12 @@ class Solution
         // {
         //     v.push_back(mp[i]);
         // }
-        for(auto it: mp)
-        {
-         for(auto k: it.second)                               //4->{9}
-        {
+    for(auto it: mp)
+    {
+         for(auto k: it.second)
             v.push_back(k);
-        }
-        }
+        
+    }
         
         return v;
     }
