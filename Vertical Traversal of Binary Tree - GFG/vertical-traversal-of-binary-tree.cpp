@@ -103,40 +103,65 @@ class Solution
     //Function to find the vertical order traversal of Binary Tree.
     vector<int> verticalOrder(Node *root)
     {
-        
-        vector<int> v;
+         vector<int> v;
         if(root==NULL) return v;
-        queue<pair<Node*,int> > q;
-        
-        q.push({root,0});
+        queue<pair<Node*,int>> q;
         map<int,vector<int>> mp;
+        q.push({root,0});
         while(!q.empty())
         {
             Node* temp=q.front().first;
-            int ver_dist=q.front().second;
+            int dist=q.front().second;
             q.pop();
             
-            if(temp->left!=NULL)  q.push({temp->left,ver_dist-1});
-            if(temp->right!=NULL) q.push({temp->right,ver_dist+1});
-            mp[ver_dist].push_back(temp->data);
+            if(temp->left!=NULL) q.push({temp->left,dist-1});
+            if(temp->right!=NULL) q.push({temp->right,dist+1});
+            
+            mp[dist].push_back(temp->data);
         }
-        // for(auto i=0;i<mp.size();i++)
-        // {
-        //     v.push_back(mp[i]);
-        // }
-    for(auto it: mp)
-    {
-         for(auto k: it.second)
-            v.push_back(k);
         
-    }
-        
+        for(auto it: mp)
+        {
+            for(auto k: it.second)
+            {
+                v.push_back(k);
+            }
+        }
         return v;
-    }
+        
+    }  
 };
 
 
-
+//  vector<int> v;
+//         if(root==NULL) return v;
+//         queue<pair<Node*,int> > q;
+        
+//         q.push({root,0});
+//         map<int,vector<int>> mp;
+//         while(!q.empty())
+//         {
+//             Node* temp=q.front().first;
+//             int ver_dist=q.front().second;
+//             q.pop();
+            
+//             if(temp->left!=NULL)  q.push({temp->left,ver_dist-1});
+//             if(temp->right!=NULL) q.push({temp->right,ver_dist+1});
+//             mp[ver_dist].push_back(temp->data);
+//         }
+//         // for(auto i=0;i<mp.size();i++)
+//         // {
+//         //     v.push_back(mp[i]);
+//         // }
+//     for(auto it: mp)
+//     {
+//          for(auto k: it.second)
+//             v.push_back(k);
+        
+//     }
+        
+//         return v;
+    
 // { Driver Code Starts.
 int main() {
     int t;
