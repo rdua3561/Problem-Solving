@@ -111,11 +111,12 @@ class Solution {
             if(temp->left!=NULL) q.push({temp->left,dist-1});
             if(temp->right!=NULL) q.push({temp->right,dist+1});
             
-            if(mp.find(dist)!=mp.end())
-              mp[dist]=temp->data;
+            // if(mp.find(dist)!=mp.end())
+            //   mp[dist]=temp->data;
               
-              else if(mp.find(dist)==mp.end())
-              mp[dist]=temp->data;
+            //   else if(mp.find(dist)==mp.end())
+            //   mp[dist]=temp->data;
+            mp[dist]=temp->data;
         }
         
         for(auto it: mp)
