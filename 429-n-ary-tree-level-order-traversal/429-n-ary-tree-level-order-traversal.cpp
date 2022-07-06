@@ -36,11 +36,13 @@ public:
                 q.pop();
                 v.push_back(temp->val);
                 
-                 for(int j=0;j<temp->children.size();j++)
-                {
+//                  for(int j=0;j<temp->children.size();j++)
+//                 {
                     
-                    q.push(temp->children[j]); 
-                }
+//                     q.push(temp->children[j]); 
+//                 }
+                for (auto i : temp -> children)
+                     q.push(i);
                  
                 
             }
