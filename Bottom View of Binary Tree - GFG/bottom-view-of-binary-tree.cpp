@@ -114,7 +114,7 @@ class Solution {
             if(mp.find(dist)!=mp.end())
               mp[dist]=temp->data;
               
-              else
+              else if(mp.find(dist)==mp.end())
               mp[dist]=temp->data;
         }
         
