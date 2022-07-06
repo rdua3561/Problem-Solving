@@ -123,7 +123,7 @@ class Solution
         if(mp.find(dist)==mp.end())
             mp[dist].push_back(temp->data);
         }
-        vector<int> ans;
+        
         for(auto it: mp)
         {
             for(auto k: it.second)
