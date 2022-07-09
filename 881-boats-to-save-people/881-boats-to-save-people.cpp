@@ -47,6 +47,11 @@ public:
                 cnt++;
             }
             
+              else if(people[i]<=limit){
+                i++;
+                cnt++;
+            }
+            
             
               
         }
