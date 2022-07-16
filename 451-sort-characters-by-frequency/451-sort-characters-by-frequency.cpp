@@ -16,7 +16,12 @@ public:
         string temp="";
         while(!pq.empty())
         {
-            temp+=string(pq.top().first,pq.top().second);
+            //temp+=string(pq.top().first,pq.top().second);
+            int fq=pq.top().first;
+            int ch=pq.top().second;
+            while(fq--)
+                temp+=ch;
+            
             pq.pop();
         }
         
