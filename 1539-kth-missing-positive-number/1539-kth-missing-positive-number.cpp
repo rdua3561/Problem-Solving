@@ -1,5 +1,6 @@
 class Solution {
 public:
+    //Method1: Brute Force Using Sets
     int findKthPositive(vector<int>& arr, int k) {
         
         set<int> s;
@@ -20,8 +21,7 @@ public:
                  {
                      break;
                  }
-                 // else
-                 //     continue;
+                
              }
             
         }
