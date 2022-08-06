@@ -15,45 +15,39 @@ public:
         
         
       ListNode* t=new ListNode(0);
-        ListNode*head=t;
-        
+        ListNode* head=t;
         int carry=0;
-          while(l1!=NULL and l2!=NULL)
-          {
-              int value=l1->val+l2->val+carry;
-              carry=value/10;
-              t->next=new ListNode(value%10);
-              
-              l1=l1->next;
-              l2=l2->next;
-              t=t->next;
-          }
-        
-        while(l1!=NULL)
+        while(l1!=NULL and l2!=NULL)
         {
-          
-              int value=l1->val+carry;
-              carry=value/10;
-              t->next=new ListNode(value%10);
-              
-              l1=l1->next;
-              t=t->next;
-        
+            int sum=l1->val+l2->val+carry;
+            carry=sum/10;
+            t->next=new ListNode(sum%10);
+            t=t->next;
+            l1=l1->next;
+            l2=l2->next;
         }
-        while(l2!=NULL)
+           while(l1!=NULL)
         {
-          
-              int value=l2->val+carry;
-              carry=value/10;
-              t->next=new ListNode(value%10);
-              
-              l2=l2->next;
-              t=t->next;
-        
+            int sum=l1->val+carry;
+            carry=sum/10;
+            t->next=new ListNode(sum%10);
+            t=t->next;
+            l1=l1->next;
+            
         }
-        if(carry)
+           while(l2!=NULL)
+        {
+            int sum=l2->val+carry;
+            carry=sum/10;
+            t->next=new ListNode(sum%10);
+            t=t->next;
+            l2=l2->next;
+        }
+        if(carry!=0)
+        {
             t->next=new ListNode(carry);
-        
+            t=t->next;
+        }
         return head->next;
         
     }
