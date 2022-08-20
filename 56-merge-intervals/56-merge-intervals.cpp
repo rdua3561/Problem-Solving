@@ -1,32 +1,34 @@
 class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        vector<vector<int>> rd;
+        vector<vector<int>> ans;
+        
         sort(intervals.begin(),intervals.end());
+        
         int n=intervals.size();
-        //if(n==0) return rd;
+        
         for(int i=0;i<n;i++)
         {
-            if(rd.empty())
+            if(ans.empty())
             {
-                rd.push_back(intervals[i]);
+                ans.push_back(intervals[i]);
             }
+            
             else
             {
-                vector<int> &v=rd.back();
+                vector<int> &v=ans.back();
                 int xx=v[1];
-                
                 if(intervals[i][0]<=xx)
                 {
-                    v[1]=max(xx,intervals[i][1]);
+                    v[1]=max(intervals[i][1],xx);
                 }
                 else
                 {
-                    rd.push_back(intervals[i]);
+                    ans.push_back(intervals[i]);
                 }
             }
         }
-        return rd;
+        return ans;
         
     }
 };
