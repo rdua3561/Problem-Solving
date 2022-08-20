@@ -20,6 +20,7 @@ public:
                 int xx=v[1];
                 if(intervals[i][0]<=xx)
                 {
+                    v[0]=min(intervals[i][0],v[0]);
                     v[1]=max(intervals[i][1],xx);
                 }
                 else
