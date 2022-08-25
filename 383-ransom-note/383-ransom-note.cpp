@@ -10,13 +10,13 @@ public:
             
         }
         int n=ransomNote.length();
-        int c=0;
+        
          for(int i=0;i<n;i++)
         {
             if(mp.find(ransomNote[i])!=mp.end())
             {
-                c++;
-                mp[ransomNote[i]]--;
+                
+                mp[ransomNote[i]]--;            
                 if(mp[ransomNote[i]]<0){
                 
                     return false;
