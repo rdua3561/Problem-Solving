@@ -29,13 +29,13 @@ public:
         
          for(int i=0;i<nums2.size();i++)
         {
-             
-            if(mp.find(nums2[i])!=mp.end())
+             auto it=mp.find(nums2[i]);
+            if(it!=mp.end())
             {
-                if(mp[nums2[i]]>0)
+                if(it->second>0)
                 {
-                v.push_back(nums2[i]);
-                mp[nums2[i]]--;
+                v.push_back(it->first);
+                it->second--;
                 }
             }
         }
