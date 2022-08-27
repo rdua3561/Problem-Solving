@@ -25,15 +25,15 @@ public:
         }
         ans.push_back(v);
         
-         vector<int> v2;
+         v.clear();
         for(auto i: s2)
         {
             if(s1.find(i)==s1.end())
             {
-                v2.push_back(i);
+                v.push_back(i);
             }
         }
-        ans.push_back(v2);
+        ans.push_back(v);
         
         return ans;
     }
