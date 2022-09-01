@@ -16,7 +16,7 @@ public:
             if(mp.find(ransomNote[i])!=mp.end())
             {
                 
-                mp[ransomNote[i]]--;             //my galti: mp[i]--
+                mp[ransomNote[i]]--;         //my galti: mp[i]--
                 if(mp[ransomNote[i]]<0){         //my galti: if(mp[i]<0)
                 
                     return false;
@@ -31,7 +31,6 @@ public:
         
         return true;
         
-        
-        
     }
+
 };
