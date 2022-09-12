@@ -9,8 +9,7 @@ public:
         }
         int mx=-1;
         int ans=-1;
-        for(auto it: mp)
-            cout<<it.first<<" "<<it.second;
+
         for(auto it: mp)
         {
             
