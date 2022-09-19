@@ -8,7 +8,7 @@ public:
         
         while(j<nums.size())
         {
-            while(dq.size()>0 and dq.back()<nums[j])
+            while(!dq.empty() and dq.back()<nums[j]) //!dq.empty() or dq.size()>0 both same
             {
                 dq.pop_back();
             }
