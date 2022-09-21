@@ -41,15 +41,14 @@ public:
             {
                 mp[s[i]]++;
                 if(mp[s[i]]==1)
-                {
                     count++;
-                }
+                
             }
                 i++;
                 j++;
             
 
-        }
+            }
         }
         return ans;
     }
