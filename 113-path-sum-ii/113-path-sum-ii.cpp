@@ -32,7 +32,7 @@ public:
         
         help(root->left,targetSum,sum,v);
         help(root->right,targetSum,sum,v);
-        sum-=root->val;
+        //sum-=root->val; rakho ya na rakho frq ni pdta
         v.pop_back();
         
     }
