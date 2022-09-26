@@ -47,7 +47,7 @@ public:
                 fire_man=headA;
             }
             else fire_man=fire_man->next;
-            if(water_man==NULL && fire_man==NULL) return NULL;
+           // if(water_man==NULL && fire_man==NULL) return NULL;
             
            
             
