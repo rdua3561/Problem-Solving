@@ -38,6 +38,23 @@ public:
        // delete(node);
         return head;
         
-    
+//       ListNode* first=head;
+//         ListNode* second=head;
+//         for(int i=0;i<=n;i++)
+//         {
+//             first=first->next;
+//         }
+//         while(first!=NULL)
+//         {
+//             first=first->next;
+//             second=second->next;
+//         }
+//         ListNode* temp=second->next;
+//         second->next=second->next->next;
+//         delete(temp);
+        
+//         return head;
+     
+        
     }
 };
