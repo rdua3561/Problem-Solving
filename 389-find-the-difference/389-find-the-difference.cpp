@@ -12,9 +12,14 @@ public:
         {
             mp[it]--;
             
-            if(mp[it]<0)
+           
+        }
+        
+        for(auto it: mp)
+        {
+             if(it.second<0)
             {
-                return it;
+                return it.first;
             }
         }
         return NULL;
