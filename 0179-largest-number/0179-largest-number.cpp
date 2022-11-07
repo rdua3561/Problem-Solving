@@ -2,7 +2,10 @@ class Solution {
 public:
     static bool compare(int ele1, int ele2)
     {
-        if(to_string(ele1)+to_string(ele2)>to_string(ele2)+to_string(ele1))
+        string a=to_string(ele1);
+        string b=to_string(ele2);
+        
+        if(a+b > b+a)
             return 1;
         else
             return 0;
