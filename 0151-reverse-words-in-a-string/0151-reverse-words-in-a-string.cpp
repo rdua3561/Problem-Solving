@@ -5,16 +5,21 @@ public:
         string temp="";
         for(int i=0;i<s.length();i++)
         {
-            if(s[i]==' ') 
+            if(s[i]==' ' ) 
             {
                 if(temp.size()>0)
                 {
                 stack.push(temp);
-                temp="";}
+                temp="";
+                }
+                
             }
             
-            else
+            else{
+                
                 temp+=s[i];
+                
+            }
             
         }
         stack.push(temp);
