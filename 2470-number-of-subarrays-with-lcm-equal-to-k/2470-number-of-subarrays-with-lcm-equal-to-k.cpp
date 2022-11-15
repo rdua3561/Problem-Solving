@@ -20,7 +20,7 @@ public:
                 LCM=lcm(LCM,nums[j]);
                 if(LCM==k)
                     count++;
-                else if(LCM>k)
+                if(LCM>k)
                     break;
             }
         }
