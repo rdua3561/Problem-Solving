@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -19,18 +19,28 @@ int main() {
         cout << pp.first << " " << pp.second << endl;
     }
     return 0;
-}// } Driver Code Ends
+}
+// } Driver Code Ends
 
 
 pair<long long, long long> getMinMax(long long arr[], int n) {
+    int maxi=INT_MIN;
+    int mini=INT_MAX;
     
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]>maxi)
+        {
+            maxi=arr[i];
+        }
+        
+        if(arr[i]<mini)
+        {
+            mini=arr[i];
+        }
+    }
+    pair<long long, long long> s=make_pair(mini,maxi);;
+    //s.push({mini,maxi});
+    return s;
     
-    pair<long long, long long> p;
-    
-    long long &min = *min_element(arr,arr+n );
-    long long &max = *max_element(arr,arr+n );
-    p.first=min;
-    p.second=max;
-    
-    return p;
 }
